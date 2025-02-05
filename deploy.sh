@@ -2,7 +2,7 @@
     echo hi123
     sh 'chmod +x build.sh'
     sh './build.sh'
-    docker login -u ar8888 -p dckr_pat_HU8f1bsQJp3j2DnCttXuuoppo7w
-    docker tag test ar8888/ar
-    docker push ar8888/ar
+    docker login -u mani1711 -p Rithvikmani123#
+    docker tag test mani1711/t2
+    docker push mani1711/t2
     
