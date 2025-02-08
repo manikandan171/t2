@@ -1,17 +1,15 @@
-# service type loadbalancer       
----
 apiVersion: v1
 kind: Service
 metadata:
+  name: test-service  # Corrected the name field
   labels:
     app: test
-    name: test
 spec:
-  ports:
-  - name: http
-    port: 3000
-    protocol: TCP
-    targetPort: 3000
-  type: NodePort
   selector:
-    app: test
+    app: test  # Ensures it matches the label in the corresponding deployment/pod
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  type: NodePort  # Exposes service on a node port
